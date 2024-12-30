@@ -12,7 +12,7 @@ const fs=require('fs')
 
 app.use(cors({
 
-origin:"https://talk-a-tiv.vercel.app",
+origin:process.env.FRONTEND_URL,
 methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
 credentials:true
 
@@ -52,7 +52,7 @@ connectDB().then(()=>{
 // itne time me kuch na ho to stop kr dega connection ko do
         pingTimeout:60000,
     cors:{
-       origin:"https://talk-a-tiv.vercel.app",
+       origin:process.env.FRONTEND_URL,
     }
             })
 
