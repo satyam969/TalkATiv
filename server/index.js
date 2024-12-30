@@ -13,6 +13,7 @@ const fs=require('fs')
 app.use(cors({
 
 origin:"https://talk-a-tiv.vercel.app",
+methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
 credentials:true
 
 
