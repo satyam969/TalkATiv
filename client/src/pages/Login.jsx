@@ -13,7 +13,7 @@ const Login = () => {
 
     const navigate = useNavigate();
 
-    const {setUser}=useChat();
+    const {setUser,setLoading}=useChat();
 
 
     const location = useLocation();
@@ -43,6 +43,7 @@ const Login = () => {
         if (res && res.data.success) {
             console.log(res.data.user);
             setUser(res.data.user);
+            setLoading(false);
           toast.success(res.data && res.data.message);
             
 
