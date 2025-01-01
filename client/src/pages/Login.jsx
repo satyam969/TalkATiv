@@ -41,6 +41,7 @@ const Login = () => {
         
   
         if (res && res.data.success) {
+            console.log(res.data.user);
             setUser(res.data.user);
           toast.success(res.data && res.data.message);
             
