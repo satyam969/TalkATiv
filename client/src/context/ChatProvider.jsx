@@ -55,7 +55,7 @@ getdeatail();
 
 
 return (
-    <ChatContext.Provider value={{user,setUser,selectedChat,setSelectedChat,chats,setChats,notifications,setNotifications,loading}}>
+    <ChatContext.Provider value={{user,setUser,selectedChat,setSelectedChat,chats,setChats,notifications,setNotifications,setLoading,loading}}>
         {children}
     </ChatContext.Provider>
  
