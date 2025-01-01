@@ -4,6 +4,7 @@ import {toast} from "react-toastify";
 import { useState } from "react";
 import "../styles/AuthStyles.css";
 import { Link } from "react-router-dom";
+import { useChat } from "../context/ChatProvider";
 
 const Login = () => {
 
@@ -11,6 +12,8 @@ const Login = () => {
     const [password, setPassword] = useState("");
 
     const navigate = useNavigate();
+
+    const {setUser}=useChat();
 
 
     const location = useLocation();
@@ -38,7 +41,9 @@ const Login = () => {
         
   
         if (res && res.data.success) {
+            setUser(res.data.user);
           toast.success(res.data && res.data.message);
+            
 
           // document.cookie = `token=${res.data.token}; path=/; Secure; HttpOnly`;
 
