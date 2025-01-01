@@ -93,11 +93,12 @@ return res.status(400).json({
 
 // set the token inside cookies 
 
-const cookieoptions={
-    expires: new Date(Date.now()+2456000000),
-    http:true,
-    secure:true
-}
+const cookieoptions = {
+    expires: new Date(Date.now() + 2456000000), // Expiration date
+    httpOnly: true, // Prevents access via JavaScript
+    secure: true, // Ensures cookie is sent over HTTPS only
+    sameSite: 'Strict' // Ensure cookies are only sent for same-site requests
+};
 
 
 
