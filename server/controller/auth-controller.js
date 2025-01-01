@@ -97,7 +97,7 @@ const cookieoptions = {
     expires: new Date(Date.now() + 2456000000), // Expiration date
     httpOnly: true, // Prevents access via JavaScript
     secure: true, // Ensures cookie is sent over HTTPS only
-    sameSite: 'Strict' // Ensure cookies are only sent for same-site requests
+    sameSite: 'Lax' // Ensure cookies are only sent for same-site requests
 };
 
 
