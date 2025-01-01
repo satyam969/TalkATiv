@@ -96,7 +96,7 @@ return res.status(400).json({
 const cookieoptions={
     expires: new Date(Date.now()+2456000000),
     http:true,
-    // secure:true
+    secure:true
 }
 
 
